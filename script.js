@@ -1,9 +1,9 @@
 const resultado = document.querySelector("#resultado");
 const placar = document.querySelector("#placar");
 
-let vitorias = 0;
-let derrotas = 0;
-let empates = 0;
+let vitorias = Number(localStorage.getItem("vitorias")) || 0;
+let derrotas = Number(localStorage.getItem("derrotas")) || 0;
+let empates = Number(localStorage.getItem("empates")) || 0;
 
 const jogadas = ["pedra", "papel", "tesoura"];
 
@@ -15,6 +15,10 @@ function escolhaComputador() {
 function atualizarPlacar() {
     placar.textContent =
         `Vitórias: ${vitorias} | Derrotas: ${derrotas} | Empates: ${empates}`;
+
+localStorage.setItem("vitorias", vitorias);
+localStorage.setItem("derrotas", derrotas);
+localStorage.setItem("empates", empates);
 }
 
 function jogar(jogador) {
