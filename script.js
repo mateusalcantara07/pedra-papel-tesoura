@@ -7,23 +7,39 @@ function escolhaComputador() {
     return jogadas[numero];
 }
 
-document.querySelector("#pedra").addEventListener("click", function () {
+function jogar(jogador) {
+
     const computador = escolhaComputador();
 
-    resultado.textContent =
-        "Você escolheu Pedra e o computador escolheu " + computador;
+    if (jogador === computador) {
+        resultado.textContent =
+            `Você escolheu ${jogador}. O computador escolheu ${computador}. Empate!`;
+    }
+    else if (
+        (jogador === "pedra" && computador === "tesoura") ||
+        (jogador === "papel" && computador === "pedra") ||
+        (jogador === "tesoura" && computador === "papel")
+    ) {
+        resultado.textContent =
+            `Você escolheu ${jogador}. O computador escolheu ${computador}. Você venceu! 🏆`;
+    }
+    else {
+        resultado.textContent =
+            `Você escolheu ${jogador}. O computador escolheu ${computador}. Você perdeu! 😢`;
+    }
+}
+
+document.querySelector("#pedra")
+.addEventListener("click", function () {
+    jogar("pedra");
 });
 
-document.querySelector("#papel").addEventListener("click", function () {
-    const computador = escolhaComputador();
-
-    resultado.textContent =
-        "Você escolheu Papel e o computador escolheu " + computador;
+document.querySelector("#papel")
+.addEventListener("click", function () {
+    jogar("papel");
 });
 
-document.querySelector("#tesoura").addEventListener("click", function () {
-    const computador = escolhaComputador();
-
-    resultado.textContent =
-        "Você escolheu Tesoura e o computador escolheu " + computador;
+document.querySelector("#tesoura")
+.addEventListener("click", function () {
+    jogar("tesoura");
 });
