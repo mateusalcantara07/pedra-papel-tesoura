@@ -1,28 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedra Papel Tesoura</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
 
-    <h1>🎮 Pedra, Papel e Tesoura</h1>
+    <div class="container">
 
-    <p>Escolha sua jogada:</p>
+        <h1 class="titulo-jogo">
+            🎮 Pedra, Papel e Tesoura
+        </h1>
 
-    <button id="pedra">✊ Pedra</button>
-    <button id="papel">✋ Papel</button>
-    <button id="tesoura">✌️ Tesoura</button>
+        <p class="subtitulo">
+            Escolha sua jogada
+        </p>
 
-    <h2 id="resultado">Faça sua jogada!</h2>
+        <div class="botoes">
 
-    <p id="placar">
-    Vitórias: 0 | Derrotas: 0 | Empates: 0
-    </p>
-    
+            <button id="pedra">✊ Pedra</button>
+
+            <button id="papel">✋ Papel</button>
+
+            <button id="tesoura">✌️ Tesoura</button>
+
+        </div>
+
+        <div id="arena">
+
+            <div class="jogador-box">
+                <h3>VOCÊ</h3>
+                <div id="jogador-mao">❔</div>
+            </div>
+
+            <div id="vs">VS</div>
+
+            <div class="jogador-box">
+                <h3>CPU</h3>
+                <div id="cpu-mao">❔</div>
+            </div>
+
+        </div>
+
+        <h2 id="resultado">
+            Faça sua jogada!
+        </h2>
+
+        <p id="placar">
+            Vitórias: 0 | Derrotas: 0 | Empates: 0
+        </p>
+
+        <button id="zerar">
+            🔄 Zerar Placar
+        </button>
+
+    </div>
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
