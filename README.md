@@ -4,8 +4,7 @@
 **Curso:** ADS
 **Professora:** Maristela  
 **Formato:** Markdown  
-**Modalidade:** Individual  
-**Integrante:** Mateus André Oliveira de Alcantara
+**Aluno:** Mateus André Oliveira de Alcantara
 
 ## Breve descrição
 
